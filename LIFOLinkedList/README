@@ -1,0 +1,26 @@
+Evan Altman & Daniel Mahr
+
+Objectives:
+1. Implement a generic class MoveToFront list in LIFO (last in first out) using the LinkedList<T> in the Java API. Equivalent to a stack without repitions. 
+2. State and explain the worst case big-O running times of the methods bellow when implemented with an ArrayList and LinkedList (Singly-LinkedList).
+
+Include the following methods:
+1. push: Adds a new item and removes previous ocurrences.
+2. pop: Removes the item added the latest to the list.
+3. contains: Returns true if given item is in the list and false if not.
+4. isEmpty: Returns true is list is empty or false if not.
+5. toString: Prints the contents of the list.
+
+ArrayList
+push: O(n) First you need to check each index of the list for previous occurrences and remove them. After it checks for previous occurences we use push the item to the end of the list. Since we need to check each index at the minimum the runtime will be O(n) n being list size.
+pop: O(n) Since ArrayList doesn't have a pointer to the last index we need to loop through each index and check if it has a next index. If there isn't a next index remove current index. 
+contains: O(n) To check if the given item is in the list you have to check each index in the list.
+isEmpty: O(1) isEmpty is essentially one line of code: return (list.size()==0)
+toString: O(n) Need to loop through each index to print contents. 
+
+LinkedList
+push: O(n) First you need to check each index of the list for previous occurrences and remove them. After it checks for previous occurences we use push the item to the end of the list. Since we need to check each index at the minimum the runtime will be O(n) n being list size. If we didn't need to check for previous occurences we could've used addLast for O(1) time.
+pop: O(1) LinkedList has a pointer to the last element. You do not have to check for a next item like in ArrayList.
+contains: O(n) To check if the given item is in the list you have to check each index in the list.
+isEmpty: O(1) isEmpty is essentially one line of code: return (list.size()==0)
+toString: O(n) Need to loop through each index to print contents. 
