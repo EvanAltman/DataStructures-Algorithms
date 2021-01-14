@@ -1,0 +1,23 @@
+Evan Altman & Daniel Mahr
+
+Objectives:
+1. Implement a set as a data structure. Use the ArrayList<T> in the Java API to implement a generic class Set<T>.
+2. State and explain the worst case big-O running times of the methods bellow when implemented with an ArrayList and LinkedList (Singly-LinkedList).
+ 
+Include the following methods:
+1. add: Adds a new item. Will ignore if the item is already in the set.
+2. remove: Removes an item. Will ignore if the item is not in the set.
+3. membership: Returns true if the given item is in the set and false if not. 
+4. toString: Returns a string with a list of items in the set.
+
+ArrayList:
+add: O(n) When inserting with an ArrayList you have to check for the next available open index and check if the item is already in the ArrayList using the membership method. If the ArrayList is full it will create a bigger array and copy all the elements from the old ArrayList to the new one.    
+remove: O(n) When removing with an ArrayList you have to check each index for the item and then shift all the subsequent items left. 
+membership: O(n) The membership method has to check if the item is in the set with a for loop. If the target item is the last item in the set the method will take n, n being the number of elements in the set.
+toString: O(n) Inside the toString method we have to iterate through each index and print the value. N elements it will take n time to go through each index. 
+
+LinkedList:
+add: O(n) While inserting with a LinkedList is O(1) if we used a LinkedList for our class Set we would still need to check if the item is already in the set so we need to check membership with our method and then add the new item.
+remove: O(n) You might need to transverse the whole list to find the item you want to delete. 
+membership: O(n) The membership method has to check if the item is in the set with a for loop. If the target item is the last item in the set the method will take n, n being the number of elements in the set.
+toString: O(n) Inside the toString method we have to iterate through each index and print the value. N elements it will take n time to go through each index. 
