@@ -1,0 +1,34 @@
+Evan Altman & Daniel Mahr
+
+Objectives:
+1. Write a method that implements Selection Sort.
+2. Write a method that implements Quick Sort with the pivot in the first position of the subarray.
+3. Write a method that implements Quick Sort and choose three positions of the subaray at random and make the median of the values the pivot. 
+4. Calculate the run time for each when the input for each array is in increasing, decreasing, and random order.
+5. Use random numbers in a text file and sort them using the methods created above.
+
+Data in nanoseconds:
+NOTE: Eclipse rouded the numbers.
+
+Selection Sort:
+*   Increasing: 85900 nanosecs
+*   Decreasing: 67800 nanosecs
+*   Random: 68700 nanosecs
+*   COVIDcases.txt: 94000 nanosecs
+
+Quick Sort (first position pivot):
+*   Increasing: 262600 nanosecs
+*   Decreasing: 196100 nanosecs
+*   Random: 47500 nanosecs
+*   COVIDcases.txt: 18000 nanosecs
+
+Quick Sort (median of three random positions pivot):
+*   Increasing: 158200 nanosecs
+*   Decreasing: 107000 nanosecs
+*   Random: 31600 nanosecs
+*   COVIDcases.txt: 20300 nanosecs
+
+
+Sources:
+https://www.geeksforgeeks.org/quick-sort/
+https://www.geeksforgeeks.org/selection-sort/
