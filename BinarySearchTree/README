@@ -1,0 +1,39 @@
+Evan Altman & Daniel Mahr
+
+Objectives:
+1. Estimate the difference of search time in a skewed and balanced BST.
+2. State and explain the big-O running times.
+3. Insert keys 1,2, . . . n into the skewed tree and measure the time to find n+1.
+4. Insert the same keys into another tree but use pre-order tranversal for insertion to make it balanced. Measure the time to find n+1.
+5. Use the following code to measure running time in nanoseconds:
+long startTime = System.nanoTime();
+System.out.println("Time = " + (System.nanoTime() - startTime) + "nanosecs");
+
+To test search time we are looking for n+1. We do this because n+1 isn't in the tree and it will have to check every element resulting in the worst case.
+
+big-O of search
+Skewed Tree: Our implementation of a skewed tree includes insert and contains from the BinarySearchTree class. Insert's bigO running time is O(n). Contains is similar to search so the bigO running time is O(n). For both insert and contains n represents the height of the skewed tree.
+Balanced Tree: O(lgn) Our implementation of a balanced tree includes insert and contains from the BinarySearchTree class. Insert's bigO running time is O(lgn). Contains is similar to search so the bigO running time is O(lgn). The n number of elements are balanced so in the each level we are dividing by 2 to get the number of elements in the next level. So lgn is the number of times divided by 2 until you reach 1. So the height of a balanced tree is lg(n) and to find an element that could be at the very end of the tree would be lg(n) steps.
+
+Data in nanoseconds:
+NOTE: Eclipse rounded the numbers. 
+
+Skewed BST - Search
+ *   n=10
+ *   n=68,000
+ *   n^2=70,900
+ *   n^3=75,300
+ *   n^4=81,700
+ *   n^5=84,300
+ *   n^6=105,500
+Balanced BST - Search
+ *   n=10
+ *   n=4,400
+ *   n^2=4,000
+ *   n^3=5,100
+ *   n^4=5,900
+ *   n^5=7,800
+ *   n^6=9,200
+
+
+
